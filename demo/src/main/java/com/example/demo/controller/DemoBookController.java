@@ -34,15 +34,15 @@ public class DemoBookController {
 			  return demobookres.getDemobookstatusresponse();
 		}
 
-	// get books details in db	
-	@GetMapping("/getbookdetails")
+	// get books details from db	
+	@GetMapping("/getbooksdetails")
 	@ResponseStatus(HttpStatus.FOUND)
 	public List<DemoBook> getBookDetails() {
 
 		return demoBookService.getBookDetailsService();
 	}
 	
-	// get book details in db	
+	// get book details from db	
 	@GetMapping("/getbookdetailsById/{id}")
 	@ResponseStatus(HttpStatus.FOUND)
 	public DemoBook getBookbyId(@PathVariable("id")  int id) {
